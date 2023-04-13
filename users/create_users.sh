@@ -21,6 +21,7 @@ do
     sudo mkdir /home/$username/public_html
     sudo chown $username /home/$username/public_html
     sudo chmod -R go+rX /home/$username/
+    sudo chsh -s /bin/bash $username
 
 done < users_to_create.csv
 
