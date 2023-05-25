@@ -12,5 +12,7 @@ randomWord1=`head -$RANDOM_NUMBER /usr/share/dict/words | tail -1`
 generate_random
 randomWord2=`head -$RANDOM_NUMBER /usr/share/dict/words | tail -1`
 
-pass=`echo "$randomWord1$randomWord2"1 | sed "s/\'//g"`
+generate_random
+pass=`echo "$randomWord1$randomWord2"$RANDOM_NUMBER | sed s/\'//g`
+
 echo $pass
